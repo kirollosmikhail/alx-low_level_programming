@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry pint
+ * main - Entry point
  *
  * Descriptian:C program that prints using puts function
  *
