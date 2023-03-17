@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main - prints all single digit numbers of 10 start from 0,
  * followed by a new line,and  using putchar
