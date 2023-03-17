@@ -1,11 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entery point
- *
- * Description: print alphabet in lowercase
- *
- * return: Always 0 (Success)
+ * main - Entry point  prints the alphabet in lowercase,
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -13,7 +11,7 @@ int main(void)
 
 	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		putchar (alphabet);
+		putchar(alphabet);
 	}
 	putchar('\n');
 	return (0);
