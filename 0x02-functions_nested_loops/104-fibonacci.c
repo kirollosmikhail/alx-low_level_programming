@@ -11,7 +11,7 @@
 
 int main(void)
 	{
-		unsigned long int i,fabo = 1,fab = 2,l = 1000000000,fabo1,fabo2,fab1,fab2;
+		unsigned long int i, fabo = 1, fab = 2, l = 1000000000, fabo1, fabo2, fab1, fab2;
 
 
 		printf("%lu", fabo);
