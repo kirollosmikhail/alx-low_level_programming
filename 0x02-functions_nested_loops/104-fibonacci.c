@@ -10,32 +10,38 @@
  */
 
 int main(void)
-{
-	unsigned long int i,fa = 1,fa = 2,mx = 1000000000,fab,bef2,fa1,fa2;
-
-	printf("%lu", fa);
-
-	for (i = 1; i < 91; i++)
 	{
-		printf(", %lu", fa);
-		fa += fa;
-		fa = fa - fa;
+		unsigned long int i;fabo = 1;fab = 2;l = 1000000000;fabo1;fabo2;fab1;fab2;
+
+
+		printf("%lu", fabo);
+
+
+		for (i = 1; i < 91; i++)
+		{
+			printf(", %lu", fab);
+			fab += fabo;
+			fabo = fab - fabo;
+		}
+
+
+		fabo1 = (fabo / l);
+		fabo2 = (fabo % l);
+		fab1 = (fab / l);
+		fab2 = (fab % l);
+
+
+		for (i = 92; i < 99; ++i)
+		{
+			printf(", %lu", fab1 + (fab2 / l));
+			printf("%lu", fab2 % l);
+			fab1 = fab1 + fabo1;
+			fabo1 = fab1 - fabo1;
+			fab2 = fab2 + fabo2;
+			fabo2 = fab2 - fabo2;
+		}
+		printf("\n");
+		return (0);
 	}
 
-	fab = (fa / mx);
-	bef2 = (fa % mx);
-	fa1 = (fa / mx);
-	fa2 = (fa % mx);
 
-	for (i = 92; i < 99; ++i)
-	{
-		printf(", %lu", fa1 + (fa2 / mx));
-		printf("%lu", fa2 % mx);
-		fa1 = fa1 + fab;
-		fab = fa1 - fab;
-		fa2 = fa2 + bef2;
-		bef2 = fa2 - bef2;
-	}
-	printf("\n");
-	return (0);
-}
