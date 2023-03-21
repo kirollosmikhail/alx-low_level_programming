@@ -3,21 +3,22 @@
 
 /**
  * print_to_98 - prints all natural numbers from n to 98,
+ * separated by comma,followed by space
  * followed by a new line
- * @n: print from this number
+ * @n: input
  */
 void print_to_98(int n)
 {
-	int i, j;
+	int x, j;
 
 	if (n <= 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (x = n; x <= 98; x++)
 		{
-			if (i != 98)
-				printf("%d, ", i);
-			else if (i == 98)
-				printf("%d\n", i);
+			if (x != 98)
+				printf("%d, ", x);
+			else if (x == 98)
+				printf("%d\n", x);
 		}
 	} else if (n >= 98)
 	{

@@ -3,44 +3,38 @@
 /**
  * main - fibonacci <3
  *
- * Purpose - no hardcode
+ * Description: prints the first 98 fibonacci numbers
+ * starting with 1 and 2 follow by new line
  *
  * Return:  (Success)
  */
 
 int main(void)
 {
-	unsigned long int i;
-	unsigned long int bef = 1;
-	unsigned long int aft = 2;
-	unsigned long int l = 1000000000;
-	unsigned long int bef1;
-	unsigned long int bef2;
-	unsigned long int aft1;
-	unsigned long int aft2;
+	unsigned long int i;fa = 1;fa = 2;mx = 1000000000;fab;bef2;fa1;fa2;
 
-	printf("%lu", bef);
+	printf("%lu", fa);
 
 	for (i = 1; i < 91; i++)
 	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
+		printf(", %lu", fa);
+		fa += fa;
+		fa = fa - fa;
 	}
 
-	bef1 = (bef / l);
-	bef2 = (bef % l);
-	aft1 = (aft / l);
-	aft2 = (aft % l);
+	fab = (fa / mx);
+	bef2 = (fa % mx);
+	fa1 = (fa / mx);
+	fa2 = (fa % mx);
 
 	for (i = 92; i < 99; ++i)
 	{
-		printf(", %lu", aft1 + (aft2 / l));
-		printf("%lu", aft2 % l);
-		aft1 = aft1 + bef1;
-		bef1 = aft1 - bef1;
-		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
+		printf(", %lu", fa1 + (fa2 / mx));
+		printf("%lu", fa2 % mx);
+		fa1 = fa1 + fab;
+		fab = fa1 - fab;
+		fa2 = fa2 + bef2;
+		bef2 = fa2 - bef2;
 	}
 	printf("\n");
 	return (0);
