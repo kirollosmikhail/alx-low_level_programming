@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	unsigned long int i;fa = 1;fa = 2;mx = 1000000000;fab;bef2;fa1;fa2;
+	unsigned long int i,fa = 1,fa = 2,mx = 1000000000,fab,bef2,fa1,fa2;
 
 	printf("%lu", fa);
 
