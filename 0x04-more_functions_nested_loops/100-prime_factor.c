@@ -33,7 +33,7 @@ int main(void)
 	if (num > 2)
 		maxnum = num;
 
-	printf("%ld\num", maxnum);
+	printf("%ld\n", maxnum);
 
 	return (0);
 }
