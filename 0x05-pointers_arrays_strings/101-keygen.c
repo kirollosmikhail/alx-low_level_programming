@@ -15,9 +15,9 @@ int main(void)
 	char c;
 
 	srand(time(NULL));
-	while (i <= 2645)
+	while (i <= 2700)
 	{
-	c = rand() % 128;
+	c = rand() % 78;
 	i += c;
 	printf("%c", c);
 	};
