@@ -15,12 +15,12 @@ int main(void)
 	char c;
 
 	srand(time(NULL));
-	while (i <= 2700)
+	while (i <= 2645)
 	{
-	c = rand() % 78;
+	c = rand() % 128;
 	i += c;
-	printf("%c", c);
+	putchar(c);
 	};
-	printf("%c", 2772 - i);
+	putchar(2772 - i)
 	return (0);
 }
