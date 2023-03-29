@@ -9,7 +9,7 @@
 void rev_string(char *n)
 {
 	int x = 0;
-	int n = 0;
+	int y = 0;
 	char temp;
 
 	while (*(n + x) != '\0')
@@ -18,58 +18,56 @@ void rev_string(char *n)
 	}
 	x--;
 
-	for (n = 0; n < x; n++, x--)
+	for (y = 0; y < x; y++, x--)
 	{
-		temp = *(n + n);
-		*(n + n) = *(n + x);
+		temp = *(n + y);
+		*(n + y) = *(n + x);
 		*(n + x) = temp;
 	}
 }
 
 /**
- * infinite_add -  function that adds two numbers.
+ * infinite_add - add 2 numbers together
  * @n1: text representation of 1st number to add
  * @n2: text representation of 2nd number to add
- *
  * @r: pointer to buffer
  * @size_r: buffer size
- *
  * Return: pointer to calling function
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int over = 0, x = 0, n = 0, num = 0;
-	int value1 = 0, value2 = 0, temp = 0;
+	int flow = 0, x = 0, y = 0, num = 0;
+	int secondvalue = 0, firstvalue = 0, tempp = 0;
 
 	while (*(n1 + x) != '\0')
 		x++;
-	while (*(n2 + n) != '\0')
-		n++;
+	while (*(n2 + y) != '\0')
+		y++;
 	x--;
-	n--;
-	if (n >= size_r || x >= size_r)
+	y--;
+	if (y >= size_r || x >= size_r)
 		return (0);
-	while (n >= 0 || x >= 0 || over == 1)
+	while (y >= 0 || x >= 0 || flow == 1)
 	{
 		if (x < 0)
-			value1 = 0;
+			secondvalue = 0;
 		else
-			value1 = *(n1 + x) - '0';
-		if (n < 0)
-			value2 = 0;
+			secondvalue = *(n1 + x) - '0';
+		if (y < 0)
+			firstvalue = 0;
 		else
-			value2 = *(n2 + n) - '0';
-		temp = value1 + value2 + over;
-		if (temp >= 10)
-			over = 1;
+			firstvalue = *(n2 + y) - '0';
+		tempp = secondvalue + firstvalue + flow;
+		if (tempp >= 10)
+			flow = 1;
 		else
-			over = 0;
+			flow = 0;
 		if (num >= (size_r - 1))
 			return (0);
-		*(r + num) = (temp % 10) + '0';
+		*(r + num) = (tempp % 10) + '0';
 		num++;
-		n--;
+		y--;
 		x--;
 	}
 	if (num == size_r)
