@@ -3,7 +3,7 @@
 /**
  * print_number - function that prints an integer.
  *
- * @n: n is an integer 
+ * @n: n is an integer
  *
  * Return: 0
  */
