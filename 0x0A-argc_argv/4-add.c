@@ -2,50 +2,54 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-
 /**
-* check_num - check - string there are digit
+* check_num - check the string
+*
 * @str: array str
 *
 * Return: Always 0 (Success)
 */
 int check_num(char *str)
 {
-int counter = 0;
+unsigned int x = 0;
 
-while (counter < strlen(str))
+while (x < strlen(str))
+
 {
-if (!isdigit(str[counter]))
+if (!isdigit(str[x]))
 {
 return (0);
 }
 
-counter++;
+x++;
 }
 return (1);
 }
 
 /**
-* main - a program that adds positive numbers.
+* main -  a program that adds
+* positive numbers.
 *
-* @argc: Counter arguments
+* @argc: number arguments
 * @argv: Arguments
 *
 * Return: Return Always 0 (Success)
 */
+
 int main(int argc, char *argv[])
 
 {
-int counter, x, totalsum = 0;
+int x;
+int str_to_int;
+int sum = 0;
 
-counter = 1;
-while (counter < argc)
+x = 1;
+while (x < argc)
 {
-if (check_num(argv[counter]))
-
+if (check_num(argv[x]))
 {
-x = atoi(argv[counter]);
-totalsum += x;
+str_to_int = atoi(argv[x]);
+sum += str_to_int;
 }
 
 else
@@ -53,11 +57,8 @@ else
 printf("Error\n");
 return (1);
 }
-
-counter++;
+x++;
 }
-
-printf("%d\n", totalsum);
-
+printf("%d\n", sum);
 return (0);
 }
