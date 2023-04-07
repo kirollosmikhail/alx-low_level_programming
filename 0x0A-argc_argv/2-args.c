@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main -  a program that prints
+ * main - a program that prints
  * all arguments it receives.
  *
  * @argc: number of arguments
@@ -12,12 +12,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int x;
+int x;
 
-	for (x = 1; x < argc; x++)
-	{
-		printf("%s\n", argv[x]);
-	}
-
-	return (0);
+for (x = 1; x < argc; x++)
+{
+printf("%s\n", argv[x]);
+}
+return (0);
 }
