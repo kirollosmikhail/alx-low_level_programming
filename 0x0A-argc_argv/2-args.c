@@ -14,11 +14,11 @@ int main(int argc, char *argv[])
 {
 int x = 0;
 
-if (argc > 0)
-while (x < argc)
+
+for (x = 0; x  < argc; x++)
 {
 printf("%s\n", argv[x]);
 x++
 }
-return (0);
+	return (0);
 }
