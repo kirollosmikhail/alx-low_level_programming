@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-int x;
+int x = 0;
 
 for (x = 1; x < argc; x++)
 {
