@@ -3,7 +3,7 @@
 
 /**
 * _atoi - converts a string to an integer
-
+*
 * @s: string to be converted
 *
 * Return: the int converted from the string
@@ -29,23 +29,21 @@ if (s[i] == '-')
 if (s[i] >= '0' && s[i] <= '9')
 {
 num = s[i] - '0';
-if (j % 2)
-    num = -num;
-n = n * 10 + num;
-x = 1;
-if (s[i + 1] < '0' || s[i + 1] > '9')
-    break;
-x = 0;
-}
-i++;
-}
+	if (j % 2)
+	num = -num;
+	n = n * 10 + num;
+	x = 1;
+	if (s[i + 1] < '0' || s[i + 1] > '9')
+	break;
+	x = 0;
+	}
+	i++;
+	}
 
-if (x == 0)
-return (0);
-
-return (n);
+	if (x == 0)
+	return (0);
+	return (n);
 }
-
 /**
 * main -  a program that multiplies two numbers.
 *
@@ -66,10 +64,9 @@ return (1);
 
 num0 = _atoi(argv[1]);
 num1 = _atoi(argv[2]);
-answer = num0 * num1;
+answer = num0 *num1;
 
 printf("%d\n", answer);
 
 return (0);
 }
-
