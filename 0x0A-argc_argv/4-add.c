@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+
 /**
 * check_num - check - string there are digit
 * @str: array str
@@ -12,9 +13,9 @@ int check_num(char *str)
 {
 int counter = 0;
 
-while (counter < strlen(str)) 
+while (counter < strlen(str))
 {
-if (!isdigit(str[counter])) 
+if (!isdigit(str[counter]))
 {
 return (0);
 }
@@ -35,16 +36,15 @@ return (1);
 int main(int argc, char *argv[])
 
 {
-int counter, x, totalsum = 0 ;
-
+int counter, x, totalsum = 0;
 
 counter = 1;
-while (counter < argc) 
+while (counter < argc)
 {
 if (check_num(argv[counter]))
 
 {
-x = atoi(argv[counter]); 
+x = atoi(argv[counter]);
 totalsum += x;
 }
 
