@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
-* wordcnt - a function to help to calculate
-* the number in string
-*
-* @s: string to count
-*
-* Return: int of number
-*/
+ * wordcnt - a function to help to calculate
+ * the number in string
+ *
+ * @s: string to count
+ *
+ * Return: int of number
+ */
 int wordcnt(char *s)
 {
 int x = 0, y, z = 0;
@@ -28,14 +28,14 @@ for (y = 0; s[y] != '\0'; y++)
 return (z);
 }
 /**
-* **strtow - a function that
-* splits a string into words
-*
-* @str: is a string to split
-*
-* Return: pointer to an array of strings!
-*
-*/
+ * **strtow - a function that
+ * splits a string into words
+ *
+ * @str: is a string to split
+ *
+ * Return: pointer to an array of strings!
+ *
+ */
 char **strtow(char *str)
 {
 char **ptr, *T;
@@ -43,17 +43,17 @@ int j, q = 0, num = 0, wcnt, y = 0, start, end;
 
 while (*(str + num))
 	num++;
-	wcnt = wordcnt(str);
+wcnt = wordcnt(str);
 if (wcnt == 0)
-return (NULL);
+	return (NULL);
 
 ptr = (char **) malloc(sizeof(char *) * (wcnt + 1));
 if (ptr == NULL)
 return (NULL);
-for (j = 0; j <= num; j++)
-{
+	for (j = 0; j <= num; j++)
+	{
 	if (str[j] == ' ' || str[j] == '\0')
-{
+	{
 	if (y)
 	{
 	end = j;
@@ -67,10 +67,10 @@ for (j = 0; j <= num; j++)
 	q++;
 	y = 0;
 	}
-}
-else if (y++ == 0)
-start = j;
-}
+	}
+	else if (y++ == 0)
+	start = j;
+	}
 ptr[q] = NULL;
 return (ptr);
 }
