@@ -21,7 +21,7 @@ unsigned int i, l, k;
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-	s2 = "";
+		s2 = "";
 	for (l = 0; s1[l] != '\0'; l++)
 	{
 	}
@@ -30,15 +30,15 @@ unsigned int i, l, k;
 	}
 	if (k > n)
 		k = n;
-		str = malloc((l + k + 1) * sizeof(char));
+	str = malloc((l + k + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < l + k; i++)
 	{
 		if (i < l)
-		str[i] = s1[i];
-	else
-		str[i] = s2[i - l];
+			str[i] = s1[i];
+		else
+			str[i] = s2[i - l];
 	}
 str[i] = '\0';
 return (str);
