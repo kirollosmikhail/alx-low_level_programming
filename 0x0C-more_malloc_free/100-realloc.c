@@ -12,32 +12,32 @@
   * @new_size: new_size is the new size,
   * in bytes of the new memory block
   *
-  * Return: Return new_size is 0 Return NULL 
+  * Return: Return new_size is 0 Return NULL
   * else, returns ptr
   */
 
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 if (new_size == old_size)
-    return (ptr);
+	return (ptr);
 
 if (new_size > old_size)
 {
-    free(ptr);
-    ptr = malloc(new_size);
-    return (ptr);
+	free(ptr);
+	ptr = malloc(new_size);
+	return (ptr);
 }
 if (ptr == NULL)
 {
-    free(ptr);
-    ptr = malloc(new_size);
-    return (ptr);
+	free(ptr);
+	ptr = malloc(new_size);
+	return (ptr);
 }
 
 if (new_size == 0)
 {
-    free(ptr);
-    return (NULL);
+	free(ptr);
+	return (NULL);
 }
 
 free(ptr);
