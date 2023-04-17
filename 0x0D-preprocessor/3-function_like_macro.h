@@ -1,7 +1,7 @@
-#ifndef _FUNCTION_LIKE_MACRO_H
+#ifndef ABS_h
 
-#define _FUNCTION_LIKE_MARCO_H
+#define ABS_h
 
-#define ABS(x) ((x) < 0 ? -(x) : (x)
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #endif
