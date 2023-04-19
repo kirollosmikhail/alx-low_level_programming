@@ -26,7 +26,7 @@ if (argc != 4)
 
 operator = *argv[2];
 number1 = atoi(argv[1]);
-num2 = atoi(argv[3]);
+number2 = atoi(argv[3]);
 
 if ((strlen(argv[2]) != 1) || (operator != '+' && operator != '-' &&
 	operator != '*' && operator != '/'
@@ -36,13 +36,13 @@ if ((strlen(argv[2]) != 1) || (operator != '+' && operator != '-' &&
 	exit(99);
 }
 
-if ((operator == '/' || operator == '%') && num2 == 0)
+if ((operator == '/' || operator == '%') && number2 == 0)
 {
 	printf("Error\n");
 	exit(100);
 }
 
 calc = get_op_func(argv[2]);
-printf("%d\n", calc(number1, num2));
+printf("%d\n", calc(number1, number2));
 return (0);
 }
