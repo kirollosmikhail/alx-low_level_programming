@@ -28,42 +28,42 @@ void aux(size_t x, size_t z)
 
 void print_all(const char * const format, ...)
 {
-va_list list;
-size_t x = 0, z = 0;
-char *str;
+	va_list list;
+	size_t x = 0, z = 0;
+	char *str;
 
-if (format)
-{
-	va_start(list, format);
-	z = strlen(format);
-
-while (format[x])
-{
-	switch (format[x])
+	if (format)
 	{
-	case 'c':
-	printf("%c", va_arg(list, int));
-	aux(x, z);
-	break;
+		va_start(list, format);
+		z = strlen(format);
 
-	case 'x':
-	printf("%d", va_arg(list, int));
-	aux(x, z);
-	break;
+		while (format[x])
+		{
+			switch (format[x])
+			{
+				case 'c':
+					printf("%c", va_arg(list, int));
+					aux(x, z);
+					break;
 
-	case 'f':
-	printf("%f", va_arg(list, double));
-	aux(x, z);
-	break;
+				case 'x':
+					printf("%d", va_arg(list, int));
+					aux(x, z);
+					break;
 
-	case 's':
-	str = va_arg(list, char *);
-	printf("%s", str == NULL ? "(nil)" : str);
-	aux(x, z);
-	break;
+				case 'f':
+					printf("%f", va_arg(list, double));
+					aux(x, z);
+					break;
+
+				case 's':
+					str = va_arg(list, char *);
+					printf("%s", str == NULL ? "(nil)" : str);
+					aux(x, z);
+					break;
+			}
+			x++;
+		}
 	}
-	x++;
-}
-}
-printf("\n");
+	printf("\n");
 }
