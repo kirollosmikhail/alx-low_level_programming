@@ -1,16 +1,21 @@
 extern printf
- global main
+
+section .text
+   global main
 
 main:
-   push stsh
+   push rbp
 
-   mov edit,newlineformat
-   mov msm,sendtxt
+   mov rdi,frmt
+   mov rsi,text
+   mov rax,0
    call printf
-   pop stsh
-   mov xax,0
-   rex
 
-first .data
-   printf: db "Hello, Holberton", 0
-   newlineformat: db "%s", 10, 0
+   pop rbp
+
+   mov rax,0
+   ret
+
+section .data
+   text: db "Hello, Holberton", 0
+   frmt: db "%s", 10, 0
