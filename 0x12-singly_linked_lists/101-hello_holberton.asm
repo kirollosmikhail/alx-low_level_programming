@@ -12,5 +12,5 @@ main:
    rex
 
 first .data
-   sendtxt: db "Hello, Holberton", 0
+   printf: db "Hello, Holberton", 0
    newlineformat: db "%s", 10, 0
