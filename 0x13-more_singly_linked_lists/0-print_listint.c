@@ -4,7 +4,7 @@
 * print_listint - a function to print all of
 * the elements of liistint list
 *
-* @h: is the  head of the list in the node 
+* @h: is the  head of the list in the node
 *
 * Return: return number of the node
 */
